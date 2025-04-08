@@ -4,8 +4,10 @@ Basic exercises, knowledge related to machine learning at the approach level
 ## BTVN_1
 
 - Wat is Machine Learning?
-- Introduction to **PET**, **Supervised Learning**, **Unsupervised Learning**, **Semi-Supervised Learning**, **Reinforcement Learning**
+- Introduction to **PET**(P: Performance measure, E: Experience, T: Task), **Supervised Learning**, **Unsupervised Learning**, **Semi-Supervised Learning**, **Reinforcement Learning**
 - What is the most challenging step in building a machine-learning system?
+
+![alt text](image.png)
 
 ## BTVN_2
 
