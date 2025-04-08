@@ -1,0 +1,714 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>BTVN 1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e0a90741-967f-42b6-86ef-d17997d14e68" class="page sans"><header><h1 class="page-title">BTVN 1</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-checkbox"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCheckbox"><path d="M3.85742 14.4561H12.1357C13.6123 14.4561 14.3779 13.6904 14.3779 12.2344V3.91504C14.3779 2.45215 13.6123 1.69336 12.1357 1.69336H3.85742C2.38086 1.69336 1.61523 2.45215 1.61523 3.91504V12.2344C1.61523 13.6973 2.38086 14.4561 3.85742 14.4561ZM3.93945 13.1162C3.30371 13.1162 2.95508 12.7812 2.95508 12.1182V4.02441C2.95508 3.36133 3.30371 3.0332 3.93945 3.0332H12.0537C12.6826 3.0332 13.0381 3.36133 13.0381 4.02441V12.1182C13.0381 12.7812 12.6826 13.1162 12.0537 13.1162H3.93945ZM7.26855 11.3115C7.51465 11.3115 7.72656 11.1885 7.87012 10.9697L10.9258 6.19141C11.0146 6.04785 11.0967 5.88379 11.0967 5.72656C11.0967 5.3916 10.7959 5.16602 10.4746 5.16602C10.2695 5.16602 10.085 5.27539 9.94141 5.50781L7.24121 9.8418L5.96973 8.22168C5.80566 8.00977 5.6416 7.93457 5.43652 7.93457C5.10156 7.93457 4.8418 8.20117 4.8418 8.54297C4.8418 8.70703 4.90332 8.85742 5.01953 9.00098L6.63281 10.9697C6.81738 11.209 7.01562 11.3115 7.26855 11.3115Z"></path></svg></span>Reviewed</th><td><div class="checkbox checkbox-off"></div></td></tr></tbody></table></header><div class="page-body"><p id="564bc1ca-442a-4214-ac72-c6f6f9a8aedf" class="">Bài tập về nhà Học máy - tuần 1</p><p id="8c3a5a26-c352-4b32-a61b-38b0425ece83" class="">Nộp file word trên OCW</p><p id="542b220d-be34-4dd7-8f53-981892e7ec5e" class="">
+</p><h2 id="34e6fd64-591a-43e8-9de4-b732c07e5c52" class=""><strong>Bài 1</strong></h2><p id="4647520e-de82-4f23-9a1b-a4698a29382f" class=""><strong>Dựa trên định nghĩa về học máy của Tom Mitchell, hãy xác định các thành phần PET (</strong><mark class="highlight-yellow"><strong>P: Performance measure</strong></mark><strong>, </strong><mark class="highlight-blue"><strong>E: Experience</strong></mark><strong>, </strong><mark class="highlight-red"><strong>T: Task</strong></mark><strong>) cho các bài toán học sau:</strong></p><p id="24d23473-f131-4f06-aac5-02647afd669d" class="">a/ Một hệ thống nhận dạng người đi bộ đi qua đường</p><p id="4130760b-b20d-4761-9b29-b57f5e8bc3f4" class="">b/ Hệ thống điều chỉnh nhiệt độ trong một tòa nhà thông minh</p><p id="d4c9ae01-d000-4d6b-98aa-d36a9c70996b" class="">c/ Robot hút bụi tự động di chuyển trong nhà</p><p id="caf830e1-25a9-4463-9c4b-b690f3c78652" class="">
+</p><h3 id="e94d3249-4896-4203-9e64-e3736353f88b" class="">a/ Một hệ thống nhận dạng người đi bộ đi qua đường</h3><ul id="3cc03700-74e1-4795-9685-157f2f75aad7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Task (T):</strong></mark><strong> </strong>nhận dạng người đi bộ qua đường</li></ul><ul id="8a1ebb52-8f96-42de-9cf4-281e02aba8e3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue"><strong>Experienca (E): </strong></mark>data bao gồm hình ảnh và video của người đi bộ qua đường, người không qua đường, và phương tiện khác (xe đạp, xe đẩy,…)</li></ul><ul id="7dc56d79-a435-47e7-8b1c-ef1d0179fc2a" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Performance measure (P):</strong></mark><mark class="highlight-yellow"> </mark>Tỷ lệ chính xác của việc nhận dạng người đi bộ, bao gồm các chỉ số như độ chính xác, độ nhạy, độ đặc hiệu, và F1-score.<ul id="f4daa84b-5693-47e3-be16-0f66918b0193" class="toggle"><li><details open=""><summary><strong>Độ chính xác (Accuracy)</strong></summary><p id="34f11d9b-6f38-4423-aec5-2ad89c22fa50" class="">Tỉ lệ % các dự đoán đúng trên tổng số dự đoán (bao gồm cả người băng đường và không qua đường)</p><p id="aae415ef-d165-49d6-b671-6d77da5a9bb6" class="">Công thức:</p><figure id="f3faec24-8923-4c0b-ba22-e5fa7d250e0f" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mtext>Độ ch</mtext><mover accent="true"><mtext>ı</mtext><mo>ˊ</mo></mover><mtext>nh x</mtext><mover accent="true"><mtext>a</mtext><mo>ˊ</mo></mover><mtext>c</mtext></mrow><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Độ chính xác} = \frac{TP + TN}{TP + TN + FP + FN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord latin_fallback">Đ</span><span class="mord">ộ ch</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord latin_fallback">ı</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord">nh x</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord">a</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord">c</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">TP</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">TN</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">FP</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">FN</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">TP</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">TN</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="fad1b81e-d8e5-45f6-80f9-28a56959d464" class="">Trong đó</p><ul id="67b19a80-d0cd-4ee6-83f7-3fd2cdbe0de4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>TP (True Positive)</strong></mark>: Số trường hợp người đi bộ qua đường được <mark class="highlight-yellow">dự đoán đúng</mark>.</li></ul><ul id="aee99610-e557-4986-9be4-3e4d691ec14c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>TN (True Negative)</strong></mark><mark class="highlight-yellow">:</mark> Số trường hợp không có người đi bộ hoặc người đi bộ không qua đường được <span style="border-bottom:0.05em solid">dự đoán đúng</span>.</li></ul><ul id="bda04a7e-5771-4d4d-b8c0-5cd39636c99f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>FP (False Positive)</strong></mark><mark class="highlight-yellow">: </mark>Số trường hợp không có người đi bộ hoặc người đi bộ không qua đường bị <span style="border-bottom:0.05em solid">dự đoán nhầm</span> là có người đi bộ qua đường.</li></ul><ul id="b955ecc7-fa9b-4825-a6cd-49bbdf87380b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>FN (False Negative)</strong></mark><mark class="highlight-yellow">:</mark> Số trường hợp có người đi bộ qua đường nhưng bị <span style="border-bottom:0.05em solid">dự đoán nhầm</span> là không có.</li></ul><p id="221e77ad-3af8-431b-99db-4257197842fd" class="">
+</p></details></li></ul><ul id="8532184d-2a97-424b-a54a-3fae73b8f276" class="toggle"><li><details open=""><summary><strong>Độ nhạy (Sensitivity, Recall)</strong></summary><p id="d268773a-c21d-4f54-b708-aea32c7cc9b2" class="">Tỷ lệ % các trường hợp có người đi bộ qua đường và được hệ thống nhận dạng đúng.</p><p id="59b1865a-33fa-4dd3-bd5b-b1f8e4aef3da" class=""><strong>Công thức</strong></p><figure id="5ff7e0cd-25c0-4793-a923-6bc108ea38f2" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Độ nhạy</mtext><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Độ nhạy} = \frac{TP}{TP + FN}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord latin_fallback">Đ</span><span class="mord">ộ nhạy</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">TP</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">FN</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">TP</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="1ae1e5c1-fa7d-41fb-b485-8d0df741a7a1" class=""><strong>Ví dụ</strong>: Nếu có 100 trường hợp người đi bộ qua đường và hệ thống nhận dạng đúng 90 trường hợp, thì độ nhạy là 90%.<br/><br/><br/></p></details></li></ul><ul id="6cbcff59-26ef-482f-9ada-5e301f71a4a9" class="toggle"><li><details open=""><summary><strong>Độ đặc hiệu (Specificity)</strong></summary><p id="41576685-9eaa-4441-8d65-15fbd8206de5" class=""><strong>Định nghĩa</strong>: Độ đặc hiệu là tỷ lệ phần trăm các trường hợp không có người đi bộ hoặc người đi bộ không qua đường được hệ thống nhận dạng đúng.</p><p id="c8702e30-ddc9-4eed-a8fb-23c8054ad3db" class=""><strong>Công thức</strong>:</p><figure id="c2b35c60-39af-46f5-96ec-09997a679479" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Độ đặc hiệu</mtext><mo>=</mo><mfrac><mrow><mi>T</mi><mi>N</mi></mrow><mrow><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Độ đặc hiệu} = \frac{TN}{TN + FP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord latin_fallback">Đ</span><span class="mord">ộ </span><span class="mord latin_fallback">đ</span><span class="mord">ặc hiệu</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">TN</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">FP</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">TN</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="758b9cb2-6c61-4939-9945-413a31ec00bf" class=""><strong>Ví dụ</strong>: Nếu có 100 trường hợp <span style="border-bottom:0.05em solid">không có người đi bộ hoặc người đi bộ không qua đường</span> và hệ thống <span style="border-bottom:0.05em solid">nhận dạng đúng</span> 95 trường hợp, thì độ đặc hiệu là 95%.</p><p id="6fc12be8-3113-4c17-ac8c-faf4d8564691" class="">
+</p></details></li></ul><ul id="de050fcc-9b62-4977-afc3-030c4c18a91f" class="toggle"><li><details open=""><summary><strong>F1-score</strong></summary><p id="188dc1f5-e761-459d-984f-143683981154" class="">Là một chỉ số kết hợp giữa độ nhạy và độ chính xác để đánh giá sự cân bằng giữa việc nhận dạng đúng người đi bộ và việc không bỏ sót.</p><p id="63a71b4a-1f2c-4245-a9cc-7d93754666c8" class=""><strong>Công thức</strong></p><figure id="936eafb1-f0f8-4a6f-84b9-4212fe351be2" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>F1-score</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mtext>Precision</mtext><mo>×</mo><mtext>Recall</mtext></mrow><mrow><mtext>Precision</mtext><mo>+</mo><mtext>Recall</mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{F1-score} = \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">F1-score</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1408em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Precision</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Recall</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Precision</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Recall</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="2432b609-28da-4bff-88a6-ad258a596abe" class=""><br/>Trong đó, <br/><strong>Precision</strong> là độ chính xác của các dự đoán dương tính, tức là tỷ lệ phần trăm các dự đoán người đi bộ qua đường đúng trong tổng số các dự đoán dương tính (bao gồm cả dự đoán đúng và sai).</p><figure id="2320a558-e56d-4f0c-baec-3018d77ee27e" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Precision</mtext><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Precision} = \frac{TP}{TP + FP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">Precision</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">TP</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">FP</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">TP</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div></figure><p id="21016735-5c62-4813-83d4-b2e76fa81c14" class="">
+</p><p id="df2f095b-b3e2-4c43-acd1-79ebe3edcde3" class="">Giả sử: Nếu hệ thống có Precision là 80% và Recall là 90%, thì F1-score sẽ là:</p><figure id="bd670a60-891b-4f52-b60b-961a09749d99" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>F1-score</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>0.8</mn><mo>×</mo><mn>0.9</mn></mrow><mrow><mn>0.8</mn><mo>+</mo><mn>0.9</mn></mrow></mfrac><mo>≈</mo><mn>0.85</mn></mrow><annotation encoding="application/x-tex">\text{F1-score} = \frac{2 \times 0.8 \times 0.9}{0.8 + 0.9} \approx 0.85</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">F1-score</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.9</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.9</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.85</span></span></span></span></span></div></figure><p id="494a59c8-fb23-42df-bfdd-ca0069e4e94b" class="">
+</p></details></li></ul><ul id="dc6ae977-e271-4e29-92e6-7ca9b16124d2" class="toggle"><li><details open=""><summary>Bài toán tham khảo</summary><p id="85092ee5-cb6d-4984-be52-11d66dbc1ad1" class="">Giả sử bạn có một bộ dữ liệu với 1000 hình ảnh/video, trong đó:</p><ul id="0e09ebe9-f47e-47a3-a9ed-ac80229c7d66" class="bulleted-list"><li style="list-style-type:disc">400 hình ảnh/video có người đi bộ qua đường (positive cases).</li></ul><ul id="c0e113bc-c0f0-4ed3-9e07-49e534708836" class="bulleted-list"><li style="list-style-type:disc">600 hình ảnh/video không có người đi bộ qua đường hoặc người đi bộ không qua đường (negative cases).</li></ul><p id="5618aef8-6565-42d6-b3ca-8383c89f0f2e" class="">
+</p><p id="54a30346-9786-417c-921e-290db4b01c6c" class="">Hệ thống dự đoán:</p><ul id="817b9fdc-028a-4fbd-97a1-2cb09ec09a6f" class="bulleted-list"><li style="list-style-type:disc">350 hình ảnh/video đúng có người đi bộ qua đường (TP = 350).</li></ul><ul id="2a79385d-ab97-42ab-ab35-696dcd26e7be" class="bulleted-list"><li style="list-style-type:disc">50 hình ảnh/video có người đi bộ qua đường nhưng bị nhận diện sai (FN = 50).</li></ul><ul id="9fcc8b88-59ef-495c-9b13-25ac0aa62753" class="bulleted-list"><li style="list-style-type:disc">500 hình ảnh/video đúng không có người đi bộ hoặc người đi bộ không qua đường (TN = 500).</li></ul><ul id="18829702-13f8-43f8-a2e0-bf3376bcd5f8" class="bulleted-list"><li style="list-style-type:disc">100 hình ảnh/video không có người đi bộ hoặc người đi bộ không qua đường nhưng bị nhận diện sai là có người đi bộ qua đường (FP = 100).</li></ul><p id="3eb7f3bd-abbd-41f4-866e-022df7a67342" class="">
+</p><p id="a37effec-5667-431a-90f6-506a87608137" class="">Từ đó, ta có thể tính các chỉ số như sau:</p><ul id="d9919202-1f68-4429-920b-fd6aba909a60" class="bulleted-list"><li style="list-style-type:disc">Độ chính xác:<figure id="5ecef00b-5df2-44e1-8d6c-61b15fb29cd6" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Accuracy</mtext><mo>=</mo><mfrac><mrow><mn>350</mn><mo>+</mo><mn>500</mn></mrow><mn>1000</mn></mfrac><mo>=</mo><mfrac><mn>850</mn><mn>1000</mn></mfrac><mo>=</mo><mn>85</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\text{Accuracy} = \frac{350 + 500}{1000} = \frac{850}{1000} = 85\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Accuracy</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1000</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">500</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1000</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">850</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">85%</span></span></span></span></span></div></figure></li></ul><ul id="e5cacc43-93ff-41c6-aeb0-a292ec309185" class="bulleted-list"><li style="list-style-type:disc">Độ nhạy:</li></ul><figure id="70b0194d-b08b-4258-b942-7fec30bfb644" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Recall</mtext><mo>=</mo><mfrac><mn>350</mn><mrow><mn>350</mn><mo>+</mo><mn>50</mn></mrow></mfrac><mo>=</mo><mfrac><mn>350</mn><mn>400</mn></mfrac><mo>=</mo><mn>87.5</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\text{Recall} = \frac{350}{350 + 50} = \frac{350}{400} = 87.5\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Recall</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">50</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">400</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">87.5%</span></span></span></span></span></div></figure><ul id="2694a05e-da4e-45f4-8e7d-49e2126b4e97" class="bulleted-list"><li style="list-style-type:disc">Độ đặc hiệu:<figure id="508e4e18-730d-4f70-b86d-ac4ba09bcff7" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Specificity</mtext><mo>=</mo><mfrac><mn>500</mn><mrow><mn>500</mn><mo>+</mo><mn>100</mn></mrow></mfrac><mo>=</mo><mfrac><mn>500</mn><mn>600</mn></mfrac><mo>=</mo><mn>83.3</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\text{Specificity} = \frac{500}{500 + 100} = \frac{500}{600} = 83.3\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Specificity</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">500</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">100</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">500</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">600</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">500</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">83.3%</span></span></span></span></span></div></figure></li></ul><ul id="59cddb2c-f7c0-47b1-8bc9-b3f9e89db631" class="bulleted-list"><li style="list-style-type:disc">F1-score:<ul id="dcc61f38-db75-4fbd-8ff8-fae01826bc8b" class="bulleted-list"><li style="list-style-type:circle">Precision:<figure id="e096d72f-01db-4e89-ab7d-e32cacb59b81" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>Precision</mtext><mo>=</mo><mfrac><mn>350</mn><mrow><mn>350</mn><mo>+</mo><mn>100</mn></mrow></mfrac><mo>=</mo><mfrac><mn>350</mn><mn>450</mn></mfrac><mo>=</mo><mn>77.8</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\text{Precision} = \frac{350}{350 + 100} = \frac{350}{450} = 77.8\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">Precision</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">100</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">450</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">350</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">77.8%</span></span></span></span></span></div></figure></li></ul><ul id="d0afb5f6-f097-4c4a-b8db-f850e6583c25" class="bulleted-list"><li style="list-style-type:circle">F1-score:<figure id="f79d3add-f0c3-484e-bfe0-91600cf44607" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>F1-score</mtext><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>0.778</mn><mo>×</mo><mn>0.875</mn></mrow><mrow><mn>0.778</mn><mo>+</mo><mn>0.875</mn></mrow></mfrac><mo>≈</mo><mn>0.824</mn></mrow><annotation encoding="application/x-tex">\text{F1-score} = \frac{2 \times 0.778 \times 0.875}{0.778 + 0.875} \approx 0.824</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">F1-score</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.778</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.875</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.778</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.875</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.824</span></span></span></span></span></div></figure></li></ul></li></ul><p id="7fe0a811-e842-4c51-813f-c80b9d431065" class="">Vậy, hệ thống có thể được đánh giá dựa trên các chỉ số này để xem xét hiệu quả của việc nhận diện người đi bộ đi qua đường.</p></details></li></ul></li></ul><p id="94aede72-702c-49a8-8fb4-c52020344211" class="">
+</p><h3 id="a931cdf8-7f18-4298-b8ca-c3b85f4673e0" class="">b/ Hệ thống điều chỉnh nhiệt độ trong một tòa nhà thông minh</h3><ul id="7c380f01-0878-47c3-b56c-c9150bb17fc7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Task (T):</strong></mark><mark class="highlight-red"> </mark>Điều chỉnh nhiệt độ trong tòa nhà để duy trì mức nhiệt độ mong muốn.</li></ul><ul id="f85f1b0a-3f1e-47e8-9148-336457c2c4df" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue"><strong>Experience (E):</strong></mark><mark class="highlight-blue"> </mark>Dữ liệu lịch sử về nhiệt độ trong tòa nhà, cùng với dữ liệu về các yếu tố ảnh hưởng như thời tiết bên ngoài, số lượng người trong tòa nhà, và các cài đặt nhiệt độ mong muốn trước đó.</li></ul><ul id="90a514a7-a95f-4499-ad0e-7b8048d2de43" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Performance measure (P):</strong></mark><mark class="highlight-yellow"> </mark>Mức độ chênh lệch giữa nhiệt độ thực tế và nhiệt độ mong muốn (ví dụ: sai số bình phương trung bình), và mức tiêu thụ năng lượng.</li></ul><p id="37a577aa-1d40-47fe-939a-ce00578268aa" class="">
+</p><h3 id="7c4d7cee-efd4-420d-b506-fcc3733e9f67" class="">c/ Robot hút bụi tự động di chuyển trong nhà</h3><ul id="4069ecb6-7143-4950-a5ae-bd58c0798b6b" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong>Task (T):</strong></mark><mark class="highlight-red"> </mark>Di chuyển trong nhà và làm sạch bụi bẩn.</li></ul><ul id="51249a20-3ea6-4601-8673-44b644b30581" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue"><strong>Experience (E):</strong></mark><mark class="highlight-blue"> </mark>Dữ liệu từ các cảm biến về bản đồ nhà, các vị trí có bụi bẩn, và các hoạt động làm sạch trước đó.</li></ul><ul id="974f892e-5990-4163-a078-421eb54e3a2c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Performance measure (P):</strong></mark><mark class="highlight-yellow"> </mark>Diện tích sàn nhà được làm sạch, thời gian để hoàn thành công việc, và mức độ tiêu thụ năng lượng.</li></ul><p id="95cdcfb3-7922-4f34-b52c-7561be4a81d3" class="">
+</p><h2 id="30b05587-69c5-4a1d-8492-78173317716a" class="">Bài 2</h2><p id="4ebaafc7-824c-4eb1-99ff-255df5ec9003" class="">Trong một nhà máy sản xuất bánh, trên băng chuyền có ba loại bánh với hành dạng khác nhau lần lượt xuất hiện. Để thực hiện việc gắp bánh và xếp riêng vào ba thùng, một sinh viên được giao nhiệm vụ thiết kế một tay máy có ứng dụng học máy. </p><p id="09b7628d-0f2c-4186-bdeb-e21a7e5cbc72" class="">Áp dụng cách phân loại khi xem xét đến số lượng và loại giám sát trong quá trình huấn luyện, sinh viên đó sẽ thực hiện nhiệm vụ được giao này dựa trên loại học máy nào? Giải thích lý do.   </p><p id="27a8d14f-3800-40b1-bcc5-1fcd6f927f70" class="">
+</p><h3 id="fd3fb67b-b5fc-4689-9648-8e88d885f75c" class=""><strong>Lý do chọn loại máy học:</strong></h3><ul id="e180bb39-edd1-4f59-93df-07b6d458a86e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Dữ liệu gán nhãn: </strong></mark>Trong bài toán này, cần có dữ liệu gán nhãn rõ ràng về loại bánh, điều này phù hợp với học máy có giám sát.</li></ul><ul id="019490f5-1c7b-4b09-b2ec-806952c2d241" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-yellow"><strong>Mục tiêu phân loại:</strong></mark><mark class="highlight-yellow"> </mark>Nhiệm vụ là phân loại ba loại bánh khác nhau, điều này hoàn toàn phù hợp với học máy có giám sát, nơi mà mô hình học từ các ví dụ đã gán nhãn để phân loại các đối tượng mới.</li></ul><p id="484c10b7-5622-4251-8160-6ab0daaee350" class="">
+</p><ul id="4d4fce6d-5d80-403d-9dc1-90784a409159" class="toggle"><li><details open=""><summary>Tại sao không chọn các loại học máy khác?</summary><ol type="a" id="04088202-cc02-46cc-97b5-739a7ccd6213" class="numbered-list" start="1"><li>Đặc điểm của <mark class="highlight-yellow"><strong>học không giám sát</strong></mark> sẽ không sử dụng dữ liệu dán nhãn. Trong tình huống này, sinh viên cần phải phân loại bánh theo các nhãn cụ thể.</li></ol><ol type="a" id="6b345fed-2ec8-4a16-8641-a9d8e018a38e" class="numbered-list" start="2"><li>Đặc điểm của <mark class="highlight-yellow"><strong>học bán giám sát</strong></mark> là kết hợp lượng nhỏ data có gán nhãn với lượng lớn data không có nhãn. Học bán giám sát thường được sử dụng khi việc thu thập data có gán nhãn khó khăn, hoặc tốn kém. Chỉ cần phân 3 loại bánh dựa trên hình dạng, có khả năng thu thập và chuẩn bị trc data. Vì vậy, không cần sử dụng học bán dám sát khi nhãn đã có đầy đủ.</li></ol><ol type="a" id="4b5a47e2-740c-4d52-b607-0a1e01a05ae3" class="numbered-list" start="3"><li>Đặc điểm của <mark class="highlight-yellow"><strong>học tăng cường </strong></mark>d là học dựa trên quy tắc thưởng và phạt. Mô hình học cách hành động trong 1 môi trường để tối ưu hóa tổng phần thưởng theo tgian. Đối với tình huống trên, học tăng cường thì phù hợp hơn với các môi trường động và phức tạp, còn nhiệm vụ chỉ xác định và phân loại dựa trên hình dạng thì không cần thiết. Học giám sát sẽ dễ dàng hơn.</li></ol></details></li></ul><p id="8bee3826-2860-4a43-bce6-8de23780644a" class="">
+</p><h3 id="6b8dd222-49c6-4ba7-b052-fbe13bab07d5" class="">Để thiết kế một tay máy:</h3><ol type="1" id="a2c7ceed-2dd8-49d2-baab-3b9a5bbd8fa5" class="numbered-list" start="1"><li><mark class="highlight-yellow"><strong>Xác định nhiệm vụ (Task):</strong></mark><mark class="highlight-yellow"> </mark>Nhiệm vụ của tay máy là nhận dạng và phân loại ba loại bánh khác nhau dựa trên hình dạng của chúng, sau đó gắp và xếp chúng vào các thùng tương ứng.</li></ol><ol type="1" id="26d6ef6e-1fd5-4942-8491-66452d2c0a9e" class="numbered-list" start="2"><li><mark class="highlight-yellow"><strong>Dữ liệu huấn luyện (Training Data):</strong></mark> Để huấn luyện, sinh viên cần chuẩn bị tập dữ liệu đã được gán nhãn, bao gồm nhiều hình ảnh của từng loại bánh với các nhãn tương ứng (loại 1, loại 2, loại 3). Trong đó, mỗi hình ảnh sẽ chứa thông tin về từng loại bánh.</li></ol><ol type="1" id="f38a803b-1dba-4885-810a-7217a209e5c8" class="numbered-list" start="3"><li><mark class="highlight-yellow"><strong>Phân loại có giám sát (Supervised Learning):</strong></mark> Với tập dữ liệu gán nhãn này, sinh viên sẽ sử dụng một thuật toán học máy có giám sát để huấn luyện mô hình. Các bước cơ bản:<ol type="a" id="96352a18-020b-469a-8b7e-81b9e83ded4c" class="numbered-list" start="1"><li>Thu thập dữ liệu: bao gồm hình ảnh của các loại bánh và gán nhãn chúng.</li></ol><ol type="a" id="508c1237-1925-4a31-8873-3a8d25ea7938" class="numbered-list" start="2"><li>Tiền xử lý dữ liệu: Xử lý hình ảnh trước để chuẩn bị cho huấn luyện</li></ol><ol type="a" id="d9870c8e-112a-409d-98b1-31c31bf11a88" class="numbered-list" start="3"><li>Huấn luyện mô hình: Sử dụng các thuật toán học máy để huấn luyện mô hình nhận dạng bánh</li></ol><ol type="a" id="5005f5e6-1097-45e5-9f95-76b307489ae6" class="numbered-list" start="4"><li>Đánh giá mô hình: Sử dụng một tập dữ liệu kiểm tra để đánh giá hiệu suất của mô hình.</li></ol></li></ol><p id="0f8cda00-e330-46f9-96dd-f2abacfb5cb2" class="">
+</p><h2 id="3509007e-5f92-4ebb-a017-2a735f5ae01d" class=""><strong>Bài 3: </strong></h2><p id="6e2c4e11-5949-4098-b411-dcdaae7e5a47" class="">Sau bước đầu làm quen với việc xây dựng hệ thống học máy, theo quan điểm của em bước khó khăn và thách thức nhất là bước nào? Vì sao?</p><p id="c49333a8-d53b-4943-9aba-56a321a73936" class="">
+</p><p id="1308a130-c317-4489-890b-b7642f836abc" class="">Theo em, bước thu thập và chuẩn bị một data tốt là bước khó khăn và thách thức nhất. Ở bước này, ta cần phải thu thập, làm sạch dữ liệu, biến đổi thô để có thể sử dụng được cho các mô hình học máy.</p><p id="89f1133a-835a-4e5d-9dd9-4fad2105950d" class="">Bởi vì:</p><ul id="85029efb-b509-4037-834d-82272bb37924" class="bulleted-list"><li style="list-style-type:disc">Chất lượng dữ liệu kém, chứa lỗi, thiếu hoặc sai dữ liệu, thiếu sự nhất quán</li></ul><ul id="e7dfe78c-742a-44c4-ad58-c60818bd2750" class="bulleted-list"><li style="list-style-type:disc">Khối lượng dữ liệu lớn</li></ul><ul id="78016ef3-99ef-41bd-ba88-48d59bf066f3" class="bulleted-list"><li style="list-style-type:disc">Định nghĩa và gán nhãn dữ liệu</li></ul><p id="2c29564e-1ab5-43ee-b9ad-f7ffcef873f2" class="">Bước chuẩn bị và làm sạch data có thể quyết định thành bại của mô hình học máy. Nếu dữ liệu không sạch hoặc không xử lý đúng cách, dù máy có mạnh cỡ nào hay phức tập đến bao nhiêu cũng có thể đưa ra các kết quả không chính xác.</p><p id="68fce96d-ecc9-4ced-a8e9-9c646acda6c0" class="">
+</p><h2 id="18e7cc42-018c-4a97-ad10-d70611e5de80" class=""><strong>Bài 4: </strong></h2><p id="b9a57d2e-9b39-441b-b56f-4eab6a81e8c4" class="">Phương pháp trích chọn đặc trưng của dữ liệu đóng vai trò quan trọng trong việc xây dựng và giải quyết vấn đề học máy. Phân tích thành phần chính, hay PCA (Principal component analysis), là phương pháp giảm chiều thường được sử dụng để giảm chiều của các tập dữ liệu lớn, bằng cách chuyển đổi một tập hợp biến lớn thành tập hợp nhỏ hơn nhưng vẫn chứa hầu hết thông tin trong tập hợp lớn đó. Thực hiện việc tìm kiếm và tra cứu tài liệu chuyên môn. Sau đó ghi tóm tắt từ 3 đến 5 điểm đáng chú ý của phương pháp này.</p><p id="62e0787e-3114-40f6-9eb2-062a16664e56" class="">
+</p><p id="661537b6-00ef-4f9c-868c-d61059676158" class=""><strong>Tóm tắt các điểm đáng chú ý của phương pháp PCA:</strong></p><ol type="1" id="0c429ae9-2361-406f-b2e2-4e7de8c4aa39" class="numbered-list" start="1"><li><strong>Giảm kích thước dữ liệu</strong>: PCA là kỹ thuật giúp giảm số lượng biến trong dữ liệu mà vẫn giữ được các thông tin quan trọng. <p id="8d7ac94f-2c80-44b5-9a26-43332825a009" class="">→ Làm giảm độ phức tạp của mô hình và tránh tình trạng overfitting (đọc thêm: <a href="https://machinelearningcoban.com/2017/03/04/overfitting/">https://machinelearningcoban.com/2017/03/04/overfitting/</a>)</p><ul id="e58585cd-d274-4689-8de0-99b7f0843e2c" class="toggle"><li><details open=""><summary><em>Overfitting là gì?</em></summary><p id="85d70d64-a3b5-4619-a32d-be2c58a0569c" class="">Việc này giống như khi bạn ôn thi. </p><p id="8b25ed5e-0fdd-49d6-ab18-2eaac3723a40" class="">Giả sử bạn không biết đề thi như thế nào nhưng có 10 bộ đề thi từ các năm trước. Để xem trình độ của mình trước khi thi thế nào, có một cách là bỏ riêng một bộ đề ra, không ôn tập gì. Việc ôn tập sẽ được thực hiện dựa trên 9 bộ còn lại. Sau khi ôn tập xong, bạn bỏ bộ đề đã để riêng ra làm thử và kiểm tra kết quả, như thế mới “khách quan”, mới giống như thi thật. 10 bộ đề ở các năm trước là “toàn bộ” training set bạn có. Để tránh việc học lệch, học tủ theo chỉ 10 bộ, bạn tách 9 bộ ra làm training set thật, bộ còn lại là validation test. Khi làm như thế thì mới đánh giá được việc bạn học đã tốt thật hay chưa, hay chỉ là <em>học tủ</em>. </p><p id="2716dd6b-a4cc-4c21-8223-e224ddb6bfd8" class="">Vì vậy, <em>Overfitting</em> còn có thể so sánh với việc <em>Học tủ</em> của con người.</p></details></li></ul><p id="ea25b47d-6269-46bd-b460-c4fdf689958a" class="">
+</p></li></ol><ol type="1" id="ceffb32d-9999-4fba-9603-245015d99dfb" class="numbered-list" start="2"><li><strong>Biến đổi dữ liệu</strong>: PCA thực hiện việc biến đổi dữ liệu gốc thành một tập hợp các thành phần chính (principal components), là các tổ hợp tuyến tính của các biến ban đầu. Các thành phần này được sắp xếp theo thứ tự giảm dần của lượng thông tin mà chúng mang lại (variance).<p id="bc59fc1c-1cda-43db-995c-9174b2fc7f4b" class="">
+</p></li></ol><ol type="1" id="fcc51e63-b818-49f1-bf9c-fbca0651b928" class="numbered-list" start="3"><li><strong>Giữ thông tin tối đa</strong>: Các thành phần chính được chọn để đảm bảo rằng sự biến thiên của dữ liệu được giữ ở mức cao nhất có thể, do đó thông tin gốc không bị mất đi quá nhiều khi giảm chiều.<p id="09572f1e-8c30-4e53-8530-d15b4708b797" class="">
+</p></li></ol><ol type="1" id="64f26a0e-ae7e-466b-81c4-1abb6e506629" class="numbered-list" start="4"><li><strong>Giảm nhiễu</strong>: PCA giúp loại bỏ nhiễu trong dữ liệu bằng cách tập trung vào các thành phần chính có mức độ biến thiên cao, trong khi bỏ qua các thành phần có biến thiên thấp có thể chứa nhiều nhiễu.<p id="946c9108-eb03-490a-a22a-cc7899125c37" class="">
+</p></li></ol><ol type="1" id="0581fe64-bcf6-4233-92f5-1104cbd83462" class="numbered-list" start="5"><li><strong>Tiền xử lý dữ liệu</strong>: Để PCA hoạt động hiệu quả, dữ liệu cần được chuẩn hóa hoặc chuẩn chỉnh (scaling), đặc biệt là khi các biến có đơn vị đo lường khác nhau.</li></ol><p id="fff59bf9-ccd4-808e-92e9-ca05aa714d49" class="">
+</p><ul id="013584c1-33ca-49e8-9d56-ca8594e0d751" class="toggle"><li><details open=""><summary>Các tài liệu bao quát:</summary><ol type="1" id="d525d0c6-90e5-4def-8b2a-997f171c1796" class="numbered-list" start="1"><li><strong>Jolliffe, I. T., &amp; Cadima, J. (2016). Principal component analysis: A review and recent developments.</strong><ul id="839badd8-3aed-4e3c-b6e4-0a5b70507c5b" class="bulleted-list"><li style="list-style-type:disc"><strong>Bao quát điểm:</strong> 1, 3, 4</li></ul><ul id="f281fa78-4c61-4e37-96f2-2611d5666462" class="bulleted-list"><li style="list-style-type:disc"><strong>Nội dung:</strong> Tổng quan về PCA, bao gồm cả các ứng dụng, phương pháp giảm chiều dữ liệu, và cách PCA giữ lại thông tin quan trọng.</li></ul></li></ol><ol type="1" id="15cbad04-d62e-430a-979f-dca9fb93e198" class="numbered-list" start="2"><li><strong>Abdi, H., &amp; Williams, L. J. (2010). Principal component analysis.</strong><ul id="3532a132-f35b-4fd5-b587-0c86435aa9b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Bao quát điểm:</strong> 2, 3</li></ul><ul id="21f0d0c7-0b51-4ac5-bc8b-3e735c37fa78" class="bulleted-list"><li style="list-style-type:disc"><strong>Nội dung:</strong> Trình bày về biến đổi tuyến tính và cách PCA thực hiện lựa chọn các thành phần chính, giữ lại thông tin quan trọng trong dữ liệu.</li></ul></li></ol><ol type="1" id="6e4dad66-7907-4b18-9411-1a50884226e5" class="numbered-list" start="3"><li><strong>Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction.</strong><ul id="3b710d7f-4974-4bcd-b2c2-b5919bb4c67f" class="bulleted-list"><li style="list-style-type:disc"><strong>Bao quát điểm:</strong> 1, 4, 5</li></ul><ul id="f1984877-6288-4e4a-bf94-93a48cb31461" class="bulleted-list"><li style="list-style-type:disc"><strong>Nội dung:</strong> Bao gồm nhiều phương pháp tiền xử lý dữ liệu, trong đó có PCA, cùng với các ví dụ cụ thể và hướng dẫn triển khai.</li></ul></li></ol><ol type="1" id="e397fa4d-3e97-465d-9314-efac95e8957d" class="numbered-list" start="4"><li><strong>Shlens, J. (2014). A tutorial on principal component analysis.</strong><ul id="a87c395f-5c3a-4575-bbc6-cdb75bb841ac" class="bulleted-list"><li style="list-style-type:disc"><strong>Bao quát điểm:</strong> 1, 2, 5</li></ul><ul id="f89b36f8-7810-4609-9e96-4874dff6bb04" class="bulleted-list"><li style="list-style-type:disc"><strong>Nội dung:</strong> Một hướng dẫn cơ bản và dễ hiểu về PCA, bao gồm cả biến đổi tuyến tính và cách triển khai PCA trong thực tế.</li></ul></li></ol><ol type="1" id="47393ff7-4172-4da2-ab74-0d2de6d4c2d1" class="numbered-list" start="5"><li><strong>Jolliffe, I. T. (2002). Principal Component Analysis.</strong><ul id="25972015-79a9-457b-a45a-e7751700cf11" class="bulleted-list"><li style="list-style-type:disc"><strong>Bao quát điểm:</strong> 1, 2, 3, 4</li></ul><ul id="c4d35ebf-563e-4516-b747-1b97f10b2c72" class="bulleted-list"><li style="list-style-type:disc"><strong>Nội dung:</strong> Một tài liệu toàn diện về PCA, từ nền tảng lý thuyết đến ứng dụng thực tế, bao gồm cả cách giữ lại thông tin quan trọng và các phương pháp ứng dụng trong tiền xử lý dữ liệu.</li></ul></li></ol><h3 id="dc6ca292-02ad-4c9d-bfa0-6216dfd389fc" class="">Tài liệu tích hợp đủ cả 5 điểm:</h3><ul id="a9ecb70b-3279-495f-b0cb-f70b24ccbdd2" class="bulleted-list"><li style="list-style-type:disc"><strong>Jolliffe, I. T. (2002). Principal Component Analysis.</strong><p id="1c48605f-a520-4e0e-8e73-6882c6324399" class="">Đây là tài liệu gần như đầy đủ nhất, bao quát toàn bộ 5 điểm đáng chú ý: giảm chiều dữ liệu, biến đổi tuyến tính, giữ lại thông tin quan trọng, ứng dụng trong tiền xử lý dữ liệu, và dễ hiểu, triển khai.</p></li></ul><ul id="cfa6b32b-1264-40b6-93d7-aae1ef3b0142" class="bulleted-list"><li style="list-style-type:disc"><strong>Shlens, J. (2014). A tutorial on principal component analysis.</strong><p id="40c8a45e-dc09-485b-b0bd-da64f300d353" class="">Dễ hiểu và dễ tiếp cận, tập trung vào các khái niệm cơ bản, triển khai thực tế, và cách giảm chiều dữ liệu bằng PCA.</p></li></ul><p id="ca472121-92b4-4b94-9a68-1a6bc16da2ef" class="">Nếu bạn muốn tìm một tài liệu duy nhất bao quát toàn bộ 5 điểm, tài liệu của <strong>Jolliffe</strong> là lựa chọn tốt nhất. Tuy nhiên, nếu bạn muốn nghiên cứu chuyên sâu từng điểm, có thể tham khảo các tài liệu khác nhau đã được liệt kê.</p></details></li></ul><ul id="4cc06be2-90d4-4324-aa35-1cd4d35474d5" class="toggle"><li><details open=""><summary>Các mục quan trọng trong tài liệu <strong>Jolliffe, I. T., &amp; Cadima, J. (2016). Principal component analysis</strong></summary><ol type="1" id="ac82789d-b1b8-44a8-b339-350e1b39700c" class="numbered-list" start="1"><li><strong>Giảm chiều dữ liệu (Dimensionality Reduction)</strong>:<ul id="39ec97c9-f868-4ad8-815c-ec6ea8a8099b" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 1: Introduction</strong> - Tổng quan về PCA và lý do giảm chiều dữ liệu.</li></ul><ul id="6ee346c2-8db6-4330-b557-e31ea4f01cf6" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 3: Properties of Principal Components</strong> - Phân tích về cách PCA giảm chiều dữ liệu trong khi vẫn giữ lại các thông tin quan trọng.</li></ul><ul id="e55838a7-88f6-4ed8-beae-037e07749333" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 6: Principal Components in Regression Analysis</strong> - Ứng dụng PCA trong việc giảm số lượng biến trong mô hình hồi quy.</li></ul><p id="6754e57c-6ca0-4883-bff4-c9c76a622dc4" class=""><em>Từ khóa: &quot;Dimensionality Reduction&quot;, &quot;Reduction of Dimensionality”</em></p><p id="82673bdb-49e0-44b5-be84-6e3ccec85ab1" class="">
+</p></li></ol><ol type="1" id="55d0b8d8-a0b0-4d3f-98e3-fb74cd616506" class="numbered-list" start="2"><li><strong>Biến đổi dữ liệu (Data Transformation)</strong>:<ul id="7ce09898-1917-469f-a31d-f80b1af7bda3" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 2: Mathematical Background</strong> - Cơ sở toán học của PCA, bao gồm việc biến đổi dữ liệu bằng cách sử dụng các ma trận.</li></ul><ul id="c57e7448-da3f-42ae-9922-7ddb1a50f2f0" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 4: Interpretation of Principal Components</strong> - Cách PCA biến đổi dữ liệu và tạo ra các thành phần chính mới.</li></ul><p id="090caff2-d635-45ff-94f9-45798af083d5" class=""><em>Từ khóa: &quot;Data Transformation&quot;, &quot;Transformation of Data”</em></p><p id="142608b9-9fc9-4223-9d61-594494bdc188" class="">
+</p></li></ol><ol type="1" id="da996d91-cccd-4159-9c08-ee59af533dfc" class="numbered-list" start="3"><li><strong>Giữ thông tin tối đa (Maximizing Information Retention)</strong>:<ul id="2998650a-f17b-472d-b0d4-9f52056295cc" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 3: Properties of Principal Components</strong> - PCA được thiết kế để giữ lại lượng thông tin tối đa từ dữ liệu gốc.</li></ul><ul id="e191c05e-37eb-40cf-afa0-55149c73cebb" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 5: Choosing a Subset of Principal Components or Variables</strong> - Phương pháp lựa chọn các thành phần chính để giữ lại thông tin quan trọng nhất.</li></ul><p id="f7588266-3055-402e-b146-87db98dd90a5" class=""><em>Từ khóa: &quot;Maximizing Information&quot;, &quot;Variance&quot;, &quot;Eigenvalues”</em></p><p id="031d54ea-f5ed-4864-8a5c-61901add75d4" class="">
+</p></li></ol><ol type="1" id="cc24cb8b-567d-4afd-a81b-545784a08a60" class="numbered-list" start="4"><li><strong>Giảm nhiễu (Noise Reduction)</strong>:<ul id="15abd645-07cd-4c9c-a16f-78f0606e7b68" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 4: Interpretation of Principal Components</strong> - PCA loại bỏ các thành phần ít quan trọng, thường chứa nhiều nhiễu.</li></ul><ul id="4ca0a190-cb2b-4739-af92-c4ed24f8be9b" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 6: Principal Components in Regression Analysis</strong> - PCA giúp cải thiện hiệu suất của mô hình hồi quy bằng cách loại bỏ nhiễu.</li></ul><p id="dc447449-9497-4625-82d2-6db8a13c4428" class=""><em>Từ khóa: &quot;Noise Reduction&quot;, &quot;Filtering&quot;, &quot;Data Denoising”</em></p><p id="e5c0bd21-2909-428c-b1f4-8776d7017f58" class="">
+</p></li></ol><ol type="1" id="84a612ab-aa7b-4e6d-86dc-94b65c516a11" class="numbered-list" start="5"><li><strong>Tiền xử lý dữ liệu (Data Preprocessing)</strong>:<ul id="22ff86f8-f200-479f-a478-253b89bdf879" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 2: Mathematical Background</strong> - Thảo luận về việc chuẩn hóa dữ liệu và xử lý trước khi áp dụng PCA.</li></ul><ul id="2732da5b-a5c8-4b14-9f25-32a6715ae78c" class="bulleted-list"><li style="list-style-type:disc"><strong>Chương 4: Interpretation of Principal Components</strong> - Cách dữ liệu cần được tiền xử lý để đạt hiệu quả tốt nhất khi áp dụng PCA.</li></ul><p id="c93df770-b9ad-45b9-a36a-9f536edd41e4" class=""><em>Từ khóa: &quot;Data Preprocessing&quot;, &quot;Standardization&quot;, &quot;Normalization”</em></p></li></ol><p id="c6c0acf5-696f-4d48-8a51-11013725f6f4" class="">
+</p></details></li></ul><p id="b27bfe77-81cc-4201-b9cc-90b82148e276" class="">
+</p><p id="1bd59bf9-ccd4-80a1-b8ff-ed29c7af3c17" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
